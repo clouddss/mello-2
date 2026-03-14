@@ -80,6 +80,17 @@
 
   /* Gradient (used by .button-gradient-effect) */
   --gradient-accent: linear-gradient(135deg, #d63953, #ef4a65 60%, #f76b6b);
+
+  /* ── Shorthand aliases (used by Header, Footer, Home, Product CSS) ─── */
+  --line: #e5e5e5;
+  --mint: #2a9d5c;
+  --copper: #d63953;
+  --sand: #f5ede4;
+  --ink-500: #666666;
+  --ink-700: #333333;
+  --ink-900: #121212;
+  --font-head: var(--font-heading-family);
+  --font-body: var(--font-body-family);
 }
 
 /* ── Reset ────────────────────────────────────────── */
@@ -168,6 +179,73 @@ button {
 /* Overflow helper for cart open state */
 body.overflow-hidden {
   overflow: hidden;
+}
+
+/* ── Page section spacing ─────────────────────────────── */
+.section {
+  padding: var(--section-padding-y-lg) var(--section-padding-x);
+}
+
+/* ── Fade-up animation (used on Product page) ─────────── */
+.fade-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* ── Brand pill label ─────────────────────────────────── */
+.brand-pill {
+  display: inline-block;
+  background: var(--sand);
+  color: var(--ink-700);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  margin: 0 0 0.8rem;
+}
+
+/* ── Shared section headings & copy ──────────────────── */
+.section-title {
+  margin: 0 0 0.8rem;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-text);
+}
+
+.section-copy {
+  margin: 0 0 1.2rem;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 54ch;
+}
+
+/* ── Primary button ───────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--global-button-padding-y, 12px) 24px;
+  background: var(--global-button-bg-color, #211a28);
+  color: var(--global-button-text-color, #ffffff);
+  border: var(--global-button-border-width, 0px) solid var(--global-button-border-color, #211a28);
+  border-radius: var(--global-button-radius, 8px);
+  font-size: var(--global-button-font-size, 14px);
+  font-weight: var(--global-button-font-weight, 700);
+  letter-spacing: var(--global-button-letter-spacing, 1px);
+  text-transform: var(--global-button-text-transform, none);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--global-button-hover-bg-color, #d63953);
+  color: var(--global-button-hover-text-color, #ffffff);
+  transform: translateY(-1px);
 }
 
 /* Cart count badge (used in Header) */
