@@ -326,9 +326,7 @@ section.section-template--25996907217240__new_hero_tq9qtW.custom-hero .custom-he
 
 /* Load-in animation */
 .page-fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.6s ease-out both;
 }
 
 @keyframes fadeInUp {

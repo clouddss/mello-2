@@ -248,6 +248,18 @@ body.overflow-hidden {
   transform: translateY(-1px);
 }
 
+/* ── Shared keyframes ─────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Cart count badge (used in Header) */
 .cart-count-bubble {
   position: absolute;
