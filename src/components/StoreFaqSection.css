@@ -1,0 +1,129 @@
+.store-faq-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.store-faq-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.faq-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-header-column {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.store-faq-heading {
+  color: var(--color-dark-soft);
+  font-size: 3.6rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.faq-content-column {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.store-faq {
+  width: 100%;
+  max-width: 700px;
+}
+
+.faq-container {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  background-color: var(--color-white);
+  transition: background-color 0.25s ease;
+}
+
+.faq-question:hover {
+  background-color: var(--color-light-bg);
+}
+
+.faq-question span {
+  color: var(--color-dark-soft);
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+}
+
+.faq-toggle {
+  font-size: 2rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-dark-soft);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  background-color: #ffffff;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: 15px;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 20px 15px 20px;
+  color: #4a4a4a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 749px) {
+  .store-faq-section {
+    padding: 40px 0;
+  }
+  
+  .store-faq-heading {
+    font-size: 28px;
+  }
+  
+  .faq-question {
+    padding: 12px 15px;
+  }
+  
+  .faq-question span {
+    font-size: 14px;
+  }
+  
+  .faq-answer p {
+    padding: 0 15px 12px 15px;
+    font-size: 13px;
+  }
+}

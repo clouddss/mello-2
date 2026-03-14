@@ -1,0 +1,10 @@
+/* ============================================================
+   App.css — Top-level app shell overrides
+   Global tokens and utilities live in index.css.
+   ============================================================ */
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}

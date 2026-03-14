@@ -1,0 +1,126 @@
+.reviews-section-outer {
+  border-radius: 0px;
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.reviews-section-outer .new-section {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.review-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.review-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-customer-reviews 8s linear infinite;
+  will-change: transform;
+}
+
+.review-carousel-item {
+  width: 135px;
+  margin-right: 15px;
+  height: 240px;
+  flex-shrink: 0;
+}
+
+.review-image {
+  width: 135px;
+  height: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scroll-customer-reviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1050px); /* 7 images * 150px (135+15) */
+  }
+}
+
+.reviews-section-outer .content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-section-outer .main-title {
+  font-size: 29px;
+  color: #121212;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+}
+
+.reviews-section-outer .subtitle {
+  font-size: 14px;
+  color: #121212;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.reviews-section-outer .rating-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0px;
+  padding-top: 10px;
+}
+
+.reviews-section-outer .star-icons {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  color: #000;
+}
+
+.reviews-section-outer .rating-text {
+  color: #121212;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+/* Mobile Responsive */
+@media screen and (min-width: 768px) {
+  .reviews-section-outer .main-title {
+    font-size: 42px;
+  }
+
+  .reviews-section-outer .subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Load-in animation */
+.page-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

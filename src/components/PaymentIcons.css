@@ -1,0 +1,15 @@
+.payment-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-icons-container {
+  width: 100%;
+}
+
+.payment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
