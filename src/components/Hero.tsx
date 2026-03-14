@@ -44,7 +44,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="custom-hero section-template--25996907217240__new_hero_tq9qtW page-fade-in">
+    <section className="custom-hero section-template--25996907217240__new_hero_tq9qtW">
       <div className="custom-hero__container">
         <div className="custom-hero__flex custom-hero__flex--image-right">
           {/* Product Image */}
