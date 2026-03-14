@@ -1,0 +1,10 @@
+{
+  "projectId": "0339bc52-8537-49e4-a637-42cf962f0005",
+  "createdAt": 1773517100206,
+  "version": "1.0",
+  "startupCommands": [
+    "npm install; npm run dev"
+  ],
+  "templateId": "any",
+  "detectedFramework": "vite"
+}

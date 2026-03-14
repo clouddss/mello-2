@@ -1,0 +1,128 @@
+.product-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 1rem;
+}
+
+.product-panel,
+.checkout-panel {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.76);
+  padding: 1.3rem;
+}
+
+.bundle-grid {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.bundle-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bundle-card small {
+  color: var(--mint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.bundle-card h3 {
+  margin: 0.45rem 0 0;
+}
+
+.bundle-card p {
+  margin: 0.6rem 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.bundle-card strong {
+  font-size: 1.6rem;
+}
+
+.bundle-card s {
+  color: var(--ink-500);
+}
+
+.bundle-card.active {
+  border-color: var(--copper);
+  box-shadow: 0 0 0 1px var(--copper);
+}
+
+.checkout-panel h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.selection-copy {
+  margin: 0.45rem 0 0;
+  color: var(--mint);
+  font-weight: 700;
+}
+
+.checkout-panel ul {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.checkout-panel li {
+  color: var(--ink-700);
+}
+
+.panel-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.mini-note {
+  margin-top: 0.75rem;
+  font-size: 0.83rem;
+  color: var(--ink-500);
+}
+
+.product-faq {
+  padding-bottom: 0;
+}
+
+.faq-list {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.faq-list article {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(245, 237, 228, 0.5);
+  padding: 1rem;
+}
+
+.faq-list h3 {
+  margin: 0;
+}
+
+.faq-list p {
+  margin: 0.55rem 0 0;
+  color: var(--ink-700);
+}
+
+@media (max-width: 930px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+}

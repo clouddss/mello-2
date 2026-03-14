@@ -1,0 +1,138 @@
+.image-with-text-section {
+  padding: var(--section-padding-y-lg) 0;
+  background-color: var(--color-white);
+}
+
+.image-text-container {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.image-text-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.media-column {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.text-column {
+  flex: 1;
+  text-align: left;
+}
+
+.image-text-heading {
+  font-size: 3.2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-soft);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+.accent-text {
+  color: var(--color-accent);
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+.image-text-subtitle {
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.image-text-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-xl) 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+.item-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.item-text {
+  font-size: 1.4rem;
+  color: var(--color-dark-soft);
+}
+
+.button-container {
+  margin-top: var(--spacing-xl);
+}
+
+.button {
+  display: inline-block;
+  padding: var(--btn-padding);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: var(--btn-font-weight);
+  border-radius: var(--btn-radius);
+  letter-spacing: var(--btn-letter-spacing);
+  text-transform: var(--btn-text-transform);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--btn-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.button-gradient-effect {
+  background: var(--gradient-accent);
+}
+
+@media screen and (max-width: 749px) {
+  .image-with-text-section {
+    padding: var(--section-padding-y-sm) 0;
+  }
+  
+  .image-text-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .text-column {
+    text-align: center;
+  }
+  
+  .image-text-heading {
+    font-size: 2.6rem;
+  }
+  
+  .image-text-bullet-list {
+    display: inline-block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .list-item {
+    justify-content: flex-start;
+  }
+}

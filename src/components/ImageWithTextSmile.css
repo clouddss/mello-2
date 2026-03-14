@@ -1,0 +1,186 @@
+.image-text-section {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.image-text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 990px) {
+  .image-text-section:has(.mobile-media-full-width) .image-text-container {
+    padding: 0 !important;
+  }
+
+  .image-text-section:has(.mobile-media-full-width) .text-column {
+    padding: 0 20px !important;
+  }
+}
+
+.image-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width: 599px) {
+  .image-text-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .media-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .image-text-heading,
+  .accent-text {
+    font-size: 2.8rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.3px !important;
+  }
+}
+
+.media-column {
+  width: 100%;
+  padding: 0px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  max-width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+@media (max-width: 599px) {
+  .image-text-section:has(.mobile-media-full-width) .main-image {
+    border-radius: 0;
+  }
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
+  gap: 15px;
+  margin-top: -25px;
+}
+
+.image-text-heading {
+  font-family: var(--font-heading-family-override) !important;
+  font-size: 35px;
+  font-weight: var(--font-weight-bold-override, bold) !important;
+  color: #333333 !important;
+  margin-bottom: 0;
+  margin-top: 15px;
+  letter-spacing: var(--letter-spacing-heading, -0.3px);
+}
+
+.accent-text {
+  color: #ef4a65 !important;
+  font-size: 28px;
+  letter-spacing: var(--font-accent-letter-spacing, -0.8px) !important;
+  padding: 2px 4px !important;
+  margin: 0px -4px !important;
+  display: block !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  font-family: var(--font-accent-family, serif) !important;
+  font-style: italic !important;
+  font-weight: var(--font-accent-weight, 400) !important;
+  text-transform: none !important;
+}
+
+.image-text-subtitle {
+  font-family: var(--font-body-family-override) !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: var(--letter-spacing-body);
+}
+
+.button-container {
+  margin-top: 15px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold, 700) !important;
+  transition: all 0.3s ease;
+  letter-spacing: var(--letter-spacing-body);
+  text-transform: uppercase !important;
+  text-align: center;
+  margin-top: 5px;
+  min-width: 120px;
+  border-radius: var(--global-button-radius, 40px) !important;
+  font-family: var(--font-body-family-override) !important;
+}
+
+.button:hover {
+  background-color: #211a28 !important;
+}
+
+@media screen and (min-width: 991px) {
+  .image-text-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .image-text-content {
+    flex-direction: row;
+    align-items: center; /* Changed from flex-start to center for better look */
+    gap: 40px;
+  }
+  
+  .media-column,
+  .text-column {
+    width: 50%;
+  }
+  
+  .text-column {
+    margin-top: 15px;
+  }
+  
+  .main-image {
+    margin-top: 0;
+  }
+}
+
+.page-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

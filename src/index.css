@@ -1,0 +1,245 @@
+/* ============================================================
+   index.css — Global design tokens + resets
+   Original Mello Hair Filler component variable system
+   ============================================================ */
+
+:root {
+  /* Layout */
+  --topbar-height: 44px;
+  --header-height: 68px;
+  --page-width: 1200px;
+  --content-width: 1200px;
+  --section-padding-x: 20px;
+  --section-padding-y-lg: 60px;
+  --section-padding-y-sm: 30px;
+
+  /* Brand colors */
+  --color-dark: #211a28;
+  --color-dark-soft: #211a28;
+  --color-white: #ffffff;
+  --color-accent: #ef4a65;
+  --color-text: #121212;
+  --color-text-muted: #4a4a4a;
+  --color-border: #e5e5e5;
+  --color-bg-subtle: #f8f8f8;
+  --color-success: #2a9d5c;
+
+  /* Typography */
+  --font-body-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-accent-family: Georgia, "Times New Roman", serif;
+  --font-accent: Georgia, "Times New Roman", serif;
+  --font-accent-style: italic;
+  --font-accent-weight: 400;
+  --font-accent-letter-spacing: 0px;
+  --font-accent-text-transform: none;
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  --letter-spacing-body: -0.3px;
+  --letter-spacing-heading: -0.5px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Global button tokens (used by Hero.css, ImageWithText.css, etc.) */
+  --global-button-bg-color: #211a28;
+  --global-button-text-color: #ffffff;
+  --global-button-hover-bg-color: #d63953;
+  --global-button-hover-text-color: #ffffff;
+  --global-button-border-color: #211a28;
+  --global-button-border-width: 0px;
+  --global-button-radius: 8px;
+  --global-button-font-size: 14px;
+  --global-button-font-weight: 700;
+  --global-button-padding-y: 12px;
+  --global-button-letter-spacing: 1px;
+  --global-button-text-transform: none;
+
+  /* Shorthand button tokens (used by ImageWithText.css) */
+  --btn-bg: #211a28;
+  --btn-text: #ffffff;
+  --btn-hover-bg: #d63953;
+  --btn-font-weight: 700;
+  --btn-radius: 8px;
+  --btn-letter-spacing: 1px;
+  --btn-text-transform: uppercase;
+  --btn-padding: 12px 20px;
+
+  /* Gradient (used by .button-gradient-effect) */
+  --gradient-accent: linear-gradient(135deg, #d63953, #ef4a65 60%, #f76b6b);
+}
+
+/* ── Reset ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  color-scheme: light;
+  font-size: 10px; /* 1rem = 10px base for component rem units */
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-text);
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  line-height: 1.55;
+  letter-spacing: var(--letter-spacing-body);
+  padding-top: calc(var(--topbar-height) + var(--header-height));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* ── Global utility classes ───────────────────────── */
+
+/* Shared gradient button class used across components */
+.button-gradient-effect {
+  background: var(--gradient-accent) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.button-gradient-effect:hover {
+  filter: brightness(1.05);
+}
+
+/* Theme button base used by Hero */
+.theme-button {
+  display: inline-block;
+  width: 100%;
+  padding: var(--global-button-padding-y, 12px) 20px;
+  letter-spacing: var(--global-button-letter-spacing, 1px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--global-button-font-size, 14px);
+  font-weight: var(--global-button-font-weight, 700);
+  text-transform: var(--global-button-text-transform, none);
+  border-radius: var(--global-button-radius, 8px);
+  background-color: var(--global-button-bg-color, #211a28);
+  color: var(--global-button-text-color, #ffffff);
+  border: var(--global-button-border-width, 0px) solid var(--global-button-border-color, #211a28);
+}
+
+.theme-button:hover {
+  background-color: var(--global-button-hover-bg-color, #d63953) !important;
+  color: var(--global-button-hover-text-color, #ffffff) !important;
+  transform: translateY(-1px);
+}
+
+/* Overflow helper for cart open state */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Cart count badge (used in Header) */
+.cart-count-bubble {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+/* Page-width container */
+.site-shell {
+  width: min(var(--content-width), calc(100% - 2.4rem));
+  margin: 0 auto;
+}
+
+/* Legal page shared styles */
+.legal-page {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 3rem var(--section-padding-x) 5rem;
+}
+
+.legal-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 4vw, 3rem);
+}
+
+.legal-card h1 {
+  margin: 0 0 1.6rem;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.legal-card h2 {
+  margin: 2.4rem 0 0.6rem;
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.legal-card p,
+.legal-card li {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.legal-card ul,
+.legal-card ol {
+  margin: 0.6rem 0 0 2rem;
+  list-style: disc;
+}
+
+.legal-card ol {
+  list-style: decimal;
+}
+
+@media (max-width: 780px) {
+  :root {
+    --topbar-height: 38px;
+    --header-height: 60px;
+  }
+}

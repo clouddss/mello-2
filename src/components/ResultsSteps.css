@@ -1,0 +1,279 @@
+.section-template--26436321640792__steps_PdwHhk {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-horizontal: 40px;
+  --title-color: #000000;
+  --highlight-color: #ef4a65;
+  --subtitle-color: #4a4a4a;
+  --card-border-radius: 12px;
+  --card-border-color: #e0e0e0;
+  --card-border-style: dashed;
+  --card-border-width: 1px;
+  --step-title-color: #000000;
+  --description-color: #000000;
+  --number-border-color: #000000;
+  --number-border-width: 2px;
+  --number-border-style: solid;
+  --number-border-radius: 50px;
+  --number-background-color: #ffffff;
+  --number-font-weight: 600;
+  --label-color: #000000;
+  --title-size: 34px;
+  --title-size-mobile: 34px;
+  --subtitle-size: 18px;
+  --subtitle-size-mobile: 14px;
+  --step-title-size: 18px;
+  --step-title-size-mobile: 20px;
+  --step-description-size: 12px;
+  --step-description-size-mobile: 13px;
+  --number-size: 20px;
+  --number-size-mobile: 24px;
+  --number-circle-size: 40px;
+  --number-circle-size-mobile: 40px;
+  --title-margin-bottom: 16px;
+  --title-margin-bottom-tablet: 12px;
+  --title-margin-bottom-mobile: 10px;
+  --subtitle-margin-top: 0px;
+  --subtitle-margin-bottom: 30px;
+  --step-item-max-width-750px: 250px;
+  --desktop-card-width: 280px;
+  --desktop-image-width-percent: 40%;
+  --content-max-width: 1200px;
+  --default-card-bg: #ffffff;
+  --default-image-bg: #f5f5f5;
+}
+
+.section-template--26436321640792__steps_PdwHhk.results-steps-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 248, 248, 1) 100%) !important;
+  padding-top: var(--padding-top) !important;
+  padding-bottom: var(--padding-bottom) !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.results-steps-section .steps-content-wrapper {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-horizontal);
+}
+
+.results-steps-section .section-title {
+  font-size: var(--title-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--title-margin-bottom);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.results-steps-section .global-accent-text {
+  color: var(--highlight-color);
+  font-family: var(--font-accent-family, var(--font-body-family));
+  font-style: var(--font-accent-style, normal);
+  font-weight: var(--font-accent-weight, inherit);
+  letter-spacing: var(--font-accent-letter-spacing, inherit);
+  text-transform: var(--font-accent-text-transform, none);
+  padding: 2px 4px;
+  margin: -2px -4px;
+  display: inline-block;
+}
+
+/* Desktop Layout */
+.steps-container-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .steps-container-desktop {
+    display: block;
+  }
+  
+  .steps-container-mobile {
+    display: none;
+  }
+}
+
+.steps-container {
+  width: 100%;
+}
+
+.steps-regular-layout {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  flex: 0 0 var(--desktop-card-width);
+  max-width: var(--desktop-card-width);
+}
+
+.step-card {
+  background-color: var(--content-bg-color, var(--default-card-bg));
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-width) var(--card-border-style) var(--card-border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.step-image-container {
+  width: 100%;
+  background-color: var(--image-bg-color, var(--default-image-bg));
+  position: relative;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.step-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-title-container {
+  margin-bottom: 12px;
+}
+
+.step-title {
+  font-size: var(--step-title-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--step-title-color);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-heading);
+  line-height: 1.3;
+}
+
+.step-description {
+  font-size: var(--step-description-size);
+  color: var(--description-color);
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing-body);
+}
+
+/* Mobile Layout */
+.steps-container-mobile {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .steps-container-mobile {
+    display: none;
+  }
+}
+
+.steps-container-mobile .steps-regular-layout {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps-container-mobile .step-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.steps-container-mobile .step-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.steps-container-mobile .step-image-container {
+  width: var(--desktop-image-width-percent);
+  flex-shrink: 0;
+  padding: 0;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.steps-container-mobile .step-content {
+  width: calc(100% - var(--desktop-image-width-percent));
+  padding: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .section-template--26436321640792__steps_PdwHhk {
+    --padding-horizontal: 20px;
+  }
+  
+  .results-steps-section .section-title {
+    font-size: var(--title-size-mobile);
+    margin-bottom: var(--title-margin-bottom-mobile);
+  }
+  
+  .step-title {
+    font-size: var(--step-title-size-mobile);
+  }
+  
+  .step-description {
+    font-size: var(--step-description-size-mobile);
+  }
+  
+  .steps-container-mobile .step-card {
+    flex-direction: column;
+  }
+  
+  .steps-container-mobile .step-image-container {
+    width: 100%;
+  }
+  
+  .steps-container-mobile .step-content {
+    width: 100%;
+  }
+}
+
+/* Desktop-only and Mobile-only utility classes */
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Page fade-in animation */
+.page-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
