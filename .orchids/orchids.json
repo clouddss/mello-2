@@ -6,5 +6,7 @@
     "npm install; npm run dev"
   ],
   "templateId": "any",
-  "detectedFramework": "vite"
+  "detectedFramework": "vite",
+  "vercelProjectId": "prj_Li0IwPfPKLDDtYp0RHBEKKV5gC4W",
+  "deployedWithUserToken": false
 }

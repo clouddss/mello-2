@@ -1,62 +1,83 @@
+/* ============================================================
+   BeforeAfter — Drag comparison slider
+   ============================================================ */
 
-/* Before & After Comparison Styles */
 .before-after-section {
-  padding: 40px 0;
+  background: #fff;
+  padding: 80px 0;
+}
+
+@media (max-width: 640px) {
+  .before-after-section { padding: 52px 0; }
 }
 
 .before-after-section .page-width {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
+@media (max-width: 640px) {
+  .before-after-section .page-width { padding: 0 16px; }
+}
+
+/* Section text */
 .image-comparison-container {
   width: 100%;
-  max-width: 320px;
-  margin: 16px auto;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .comparison-title {
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -1px;
   text-align: center;
-  margin-bottom: 8px;
   color: #211a28;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 640px) {
+  .comparison-title { font-size: 30px; letter-spacing: -0.5px; }
 }
 
 .before-after-section .accent-text {
   color: #ef4a65;
-  display: inline-block;
   font-style: italic;
 }
 
 .comparison-description {
-  font-size: 14px;
+  font-family: var(--font-body-family);
+  font-size: 15px;
+  line-height: 1.6;
   text-align: center;
-  margin-bottom: 16px;
-  color: #211a28;
-  line-height: 1.5;
+  color: #7a6e78;
+  margin: 0 0 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Slider */
 .slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 20px;
   aspect-ratio: 4/3;
-  min-height: 200px;
-  max-height: 400px;
   touch-action: manipulation;
   user-select: none;
   cursor: ew-resize;
-  border: 1px solid #e5e7eb;
+  background: #f0e8eb;
+  border: 1px solid #f0e8eb;
 }
 
-.after-image {
+.after-image,
+.before-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -71,45 +92,43 @@
 }
 
 .before-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
   clip-path: inset(0 50% 0 0);
+  z-index: 2;
 }
 
 .image-label {
   position: absolute;
   background: #211a28;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 40px;
+  font-family: var(--font-body-family);
+  font-size: 11px;
   font-weight: 700;
-  color: #ffffff;
-  z-index: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 3;
 }
 
 .label-before {
-  bottom: 8px;
-  left: 8px;
+  bottom: 12px;
+  left: 12px;
 }
 
 .label-after {
-  bottom: 8px;
-  right: 8px;
+  bottom: 12px;
+  right: 12px;
 }
 
 .comparison-divider-line {
   position: absolute;
   top: 0;
-  width: 3px;
-  background: #ffffff;
+  width: 2px;
+  background: #fff;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
 }
 
 .slider-button {
@@ -117,49 +136,43 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 44px;
-  height: 44px;
+  z-index: 5;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(33, 26, 40, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: grab;
-  border: 2px solid #f3f4f6;
+  border: 2px solid #f0e8eb;
   touch-action: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.slider-button:hover {
+  box-shadow: 0 6px 24px rgba(239, 74, 101, 0.25);
 }
 
 .slider-icon {
-  width: 20px;
-  height: 20px;
-  stroke: #211a28;
+  width: 22px;
+  height: 22px;
+  stroke: #ef4a65;
   stroke-width: 2;
   fill: none;
 }
 
 .slider-instructions {
   text-align: center;
-  margin-top: 12px;
-  font-size: 14px;
-  color: #211a28;
+  margin-top: 16px;
+  font-family: var(--font-body-family);
+  font-size: 13px;
+  color: #b09aa8;
+  line-height: 1.5;
 }
 
+/* Outer container */
 .before-after-container.contained {
-  max-width: 700px;
-  margin: 0 auto;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(248, 248, 248, 1) 100%);
-  padding-bottom: 20px;
-}
-
-@media (min-width: 640px) {
-  .image-comparison-container {
-    max-width: 448px;
-  }
-  .slider-container {
-    max-height: 500px;
-  }
+  width: 100%;
 }

@@ -93,10 +93,7 @@ const BeforeAfter: React.FC = () => {
 
   return (
     <section className="shopify-section section before-after-comparison">
-      <div
-        className="before-after-section page-fade-in"
-        style={{ backgroundColor: "#ffffff" }}
-      >
+      <div className="before-after-section page-fade-in">
         <div className="page-width">
           <div className="before-after-container contained">
             <div className="image-comparison-container">

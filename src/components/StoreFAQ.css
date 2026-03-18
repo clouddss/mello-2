@@ -1,0 +1,137 @@
+/* ============================================================
+   StoreFAQ — Two-column FAQ layout (mobile-first)
+   ============================================================ */
+
+.sfaq-section {
+  background: #fff;
+  padding: 52px 0;
+}
+
+@media (min-width: 640px) {
+  .sfaq-section { padding: 80px 0; }
+}
+
+.sfaq-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .sfaq-wrap { padding: 0 24px; }
+}
+
+.sfaq-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 860px) {
+  .sfaq-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+}
+
+/* Left heading */
+.sfaq-heading {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #211a28;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .sfaq-heading { font-size: 42px; letter-spacing: -1px; }
+}
+
+@media (min-width: 860px) {
+  .sfaq-heading { text-align: left; }
+}
+
+/* Accordion */
+.sfaq-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sfaq-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sfaq-item:last-child {
+  border-bottom: none;
+}
+
+.sfaq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: #211a28;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .sfaq-q { padding: 18px 20px; font-size: 15px; }
+}
+
+.sfaq-q:hover {
+  background: #fdf5f7;
+}
+
+.sfaq-toggle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #c4adb6;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sfaq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.22, 1, 0.36, 1), padding 0.3s ease;
+  padding: 0 16px;
+  background: #fff;
+}
+
+@media (min-width: 640px) {
+  .sfaq-a { padding: 0 20px; }
+}
+
+.sfaq-item.open .sfaq-a {
+  max-height: 200px;
+  padding: 0 16px 16px;
+}
+
+@media (min-width: 640px) {
+  .sfaq-item.open .sfaq-a { padding: 0 20px 18px; }
+}
+
+.sfaq-a p {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  line-height: 1.65;
+  color: #7a6e78;
+}

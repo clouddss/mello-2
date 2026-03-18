@@ -7,6 +7,7 @@ import ImageWithText from '../components/ImageWithText';
 import HowToSteps from '../components/HowToSteps';
 import BeforeAfter from '../components/BeforeAfter';
 import Testimonials from '../components/Testimonials';
+import ComparisonTable from '../components/ComparisonTable';
 import CustomFooter from '../components/CustomFooter';
 import { useCart } from '../context/CartContext';
 
@@ -35,6 +36,7 @@ const Home = () => {
         <ImageWithText onAddToCart={handleAddToCart} />
         <HowToSteps />
         <BeforeAfter />
+        <ComparisonTable />
         <Testimonials />
       </main>
       <CustomFooter />

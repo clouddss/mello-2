@@ -1,41 +1,94 @@
-.brand-topbar {
+/* ============================================================
+   AnnouncementBar — Countdown + trust messages
+   ============================================================ */
+
+.ab-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--topbar-height);
   z-index: 1100;
-  background: linear-gradient(90deg, #2f1f20, #5f3733, #2f1f20);
-  color: #fff8ef;
-  display: grid;
-  place-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.brand-topbar-track {
-  width: min(var(--content-width), calc(100% - 2.4rem));
+  background: #211a28;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ab-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
 
-.brand-topbar-track .dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
+.ab-text {
+  font-family: var(--font-body-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
 }
 
-@media (max-width: 780px) {
-  .brand-topbar-track {
-    font-size: 0.62rem;
-    gap: 0.45rem;
+.ab-divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
+
+/* Countdown */
+.ab-countdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ab-unit {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.ab-num {
+  font-family: var(--font-body-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.ab-label {
+  font-family: var(--font-body-family);
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.ab-sep {
+  font-family: var(--font-body-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ef4a65;
+  line-height: 1;
+}
+
+.ab-divider:not(:first-of-type),
+.ab-text:not(:first-of-type) {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .ab-divider:not(:first-of-type),
+  .ab-text:not(:first-of-type) {
+    display: unset;
   }
 }
